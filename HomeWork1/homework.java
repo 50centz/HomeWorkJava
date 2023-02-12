@@ -94,8 +94,6 @@ public class homework {
     // одно решение или сообщить, что его нет.
 
     public static String func(String stroka) {
-        
-        
         String [] arr = stroka.split("\\s");
         String a = arr[0];
         String b = arr[2];
@@ -120,10 +118,7 @@ public class homework {
         } 
         if (parametr){
             result = ("Нет решения!");
-
         } 
         return result;
     }
-
-    
 }
