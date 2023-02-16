@@ -74,3 +74,18 @@ public class homeworknew {
         
     }
 
+
+
+    // public static Logger log() throws IOException {
+    //     Logger logger = Logger.getLogger(task2.class.getName());
+    //     FileHandler fh = new FileHandler("log.txt", true);
+    //     logger.addHandler(fh);
+    //     logger.setUseParentHandlers(false);
+
+    //     SimpleFormatter sFormat = new SimpleFormatter();
+    //     fh.setFormatter(sFormat);
+
+    //     return logger;
+    // }
+
+
