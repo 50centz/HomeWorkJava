@@ -40,20 +40,23 @@ public class task1 {
     }
     
     public static String get_json_file(String filename){
-        String jsonfileget = "";
+        String jsonfileget = filename;
+        System.out.println(jsonfileget);
+
+        JSONObject getfile = new JSONObject();
         
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
-            String line;
-            while ((line = bufferedReader.readLine()) != null){
-                jsonfileget += line + "\n";
-            }
-            bufferedReader.close();
-            System.out.println(jsonfileget.getClass());
-            System.out.println(jsonfileget.toString());
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        // try {
+        //     BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
+        //     String line;
+        //     while ((line = bufferedReader.readLine()) != null){
+        //         jsonfileget += line + "\n";
+        //     }
+        //     bufferedReader.close();
+        //     System.out.println(jsonfileget.getClass());
+        //     System.out.println(jsonfileget.toString());
+        // } catch (Exception e){
+        //     e.printStackTrace();
+        // }
         return jsonfileget;
 
     }
