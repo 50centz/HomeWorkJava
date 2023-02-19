@@ -1,7 +1,7 @@
 package HomeWorkJava.HomeWork3;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Collections;
 
 /**
  * Task1
@@ -57,6 +57,8 @@ public class Task1 {
 
         mergingSheets.addAll(firstList);
         mergingSheets.addAll(secondList);
+
+        Collections.sort(mergingSheets);
     
         return mergingSheets;
     }
