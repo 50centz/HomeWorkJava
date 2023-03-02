@@ -1,8 +1,9 @@
 package HomeWork.HomeWork6;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -79,8 +80,6 @@ public class Task1 {
         HashMap<String, String> map = new HashMap<>();
 
         Integer choice = in.nextInt();
-        //String choice = scanner();
-        
         
         if (choice == 1){
             System.out.println("Choose a brand: Asus, Lenovo, Acer, Dell, HP, Samsung");   
@@ -98,9 +97,9 @@ public class Task1 {
             System.out.println("Select the diagonal of the screen: 15, 16, 17");
         }
         // String resul = in.nextLine();
-        String resul = scanner();
+        String result = scanner();
         String choice1 = Integer.toString(choice);
-        map.put(choice1, resul);
+        map.put(choice1, result);
         in.close();
 
         return  map;
@@ -109,29 +108,25 @@ public class Task1 {
     public static void laptop(Set<Laptop> set, HashMap<String, String> map ){
 
         Set<Laptop> set1 = new HashSet<>();
-
+        List<Laptop> listLaptop = new ArrayList<>();
         Laptop lap = new Laptop(map.get("1"), map.get("2"), map.get("3"), map.get("4"), map.get("5"));
         set1.add(lap);
-        
-      
-    
 
-
-
-        // Iterator<Laptop> it = set.iterator();
-    //     while(it.hasNext()){
-    //         if()
-    //       System.out.println(it.next());//Chaitanya Rahul Tim Rick Harry  
-    //    }  
         for (Laptop laptop : set) {
             if(laptop.equals(lap)){
-                System.out.println(laptop);
+                //System.out.println(laptop);
+                listLaptop.add(laptop);
             }
-
         }
-   }
-        
- 
-    }
+
+        if(listLaptop.size() > 0){
+            System.out.println("According to your request, these are the laptops:");
+            System.out.println(listLaptop);
+        }
+        else{
+            System.out.println("Nothing was found for your query");
+        }
+   }   
+ }
 
 
